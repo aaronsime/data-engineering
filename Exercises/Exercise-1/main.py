@@ -56,7 +56,6 @@ def unzip_files(downloads_dir):
     print(f"Finished extracting all .ZIP files from '{downloads_dir}'")
 
 
-
 def main(download_uris, downloads_dir):
     # Ensure the download directory exists
     ensure_directory_exists(downloads_dir)
@@ -69,4 +68,3 @@ def main(download_uris, downloads_dir):
 
 if __name__ == "__main__":
     main(download_uris, downloads_dir)
-

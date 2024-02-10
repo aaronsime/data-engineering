@@ -4,9 +4,6 @@ One of the main obstacles of Data Engineering is the large
 and varied technical skills that can be required on a 
 day-to-day basis.
 
-*** Note - If you email a link to your GitHub repo with all the completed
-exercises, I will send you back a free copy of my ebook Introduction to Data Engineering. ***
-
 This aim of this repository is to help you develop and 
 learn those skills. Generally, here are the high level
 topics that these practice problems will cover.
