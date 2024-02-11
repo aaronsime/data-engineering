@@ -19,12 +19,12 @@ download_uris = [
 downloads_dir = r'C:\Users\iron_\Desktop\repos\data-engineering-practice\Exercises\Exercise-1\Downloads'  # Relative path; adjust as needed
 
 def ensure_directory_exists(directory):
-    """Ensure the specified directory exists."""
+    # Ensure the specified directory exists.
     os.makedirs(directory, exist_ok=True)
     print(f"Directory ensured: {directory}")
 
 def download_zip(url, save_dir):
-    """Download a ZIP file from a URL to the specified save directory."""
+    # Download a ZIP file from a URL to the specified save directory.
     try:
         filename = url.split('/')[-1]
         output_path = os.path.join(save_dir, filename)
@@ -39,13 +39,14 @@ def download_zip(url, save_dir):
         print(f"An error occurred while downloading {url}: {e}")
 
 def download_files_concurrently(urls, save_dir):
-    """Download files concurrently to the specified directory."""
+    # Download files concurrently to the specified directory
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = [executor.submit(download_zip, url, save_dir) for url in urls]
         for future in futures:
             future.result()
 
 def unzip_files(downloads_dir):
+    # UnZip downloaded files and delete the zip files.
     for filename in os.listdir(downloads_dir):
         file_path = os.path.join(downloads_dir, filename)
         if zipfile.is_zipfile(file_path):
